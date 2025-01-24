@@ -1,0 +1,204 @@
+﻿<Window
+    ResizeMode="NoResize"
+    SizeToContent="WidthAndHeight"
+    Title="Tic Tac Swap"
+    mc:Ignorable="d"
+    x:Class="SicTacSwap.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="CustomButtonStyle">
+            <Setter Property="Background" Value="White" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="BorderThickness" Value="3" />
+            <Setter Property="FontSize" Value="50" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Height="500" Width="500">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+        <!--  Title  -->
+        <Label
+            FontSize="36"
+            Grid.Column="1"
+            Grid.Row="0"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center">
+            Tic Tac Swap
+        </Label>
+
+        <!--  Swap Button  -->
+        <Button
+            Click="SwapButton_Click"
+            Grid.Column="1"
+            Grid.Row="2"
+            HorizontalContentAlignment="Center"
+            IsEnabled="false"
+            Margin="60,30,60,30"
+            Name="SwapButton"
+            VerticalContentAlignment="Center">
+            Swap
+        </Button>
+
+        <!--  Reset Button  -->
+        <Button
+            Click="ClearBoardButton_Click"
+            Grid.Column="0"
+            Grid.Row="2"
+            HorizontalContentAlignment="Center"
+            IsEnabled="False"
+            Margin="20"
+            Name="ResetButton"
+            VerticalContentAlignment="Center">
+            Reset
+        </Button>
+
+        <!--  Ragequit Button  -->
+        <Button
+            Click="RagequitButton_Click"
+            Grid.Column="2"
+            Grid.Row="2"
+            HorizontalContentAlignment="Center"
+            Margin="20"
+            Name="RageButton"
+            VerticalContentAlignment="Center">
+            Ragequit
+        </Button>
+
+        <!--  Player Turn Indicator  -->
+        <Label
+            FontSize="24"
+            Grid.Column="0"
+            Grid.Row="0"
+            HorizontalContentAlignment="Center"
+            Name="Xlabel"
+            VerticalContentAlignment="Center">
+            X
+        </Label>
+        <Label
+            FontSize="24"
+            Grid.Column="2"
+            Grid.Row="0"
+            HorizontalContentAlignment="Center"
+            Name="Olabel"
+            VerticalContentAlignment="Center"
+            Visibility="Hidden">
+            O
+        </Label>
+
+        <!--  Game Board  -->
+        <Grid
+            Grid.Column="1"
+            Grid.Row="1"
+            Name="GameGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Button
+                Click="GameButton_Click"
+                Content=""
+                Grid.Column="0"
+                Grid.Row="0"
+                Height="100"
+                Style="{StaticResource CustomButtonStyle}"
+                Width="100" />
+            <Button
+                Click="GameButton_Click"
+                Content=""
+                Grid.Column="1"
+                Grid.Row="0"
+                Height="100"
+                Style="{StaticResource CustomButtonStyle}"
+                Width="100" />
+            <Button
+                Click="GameButton_Click"
+                Content=""
+                Grid.Column="2"
+                Grid.Row="0"
+                Height="100"
+                Style="{StaticResource CustomButtonStyle}"
+                Width="100" />
+            <Button
+                Click="GameButton_Click"
+                Content=""
+                Grid.Column="0"
+                Grid.Row="1"
+                Height="100"
+                Style="{StaticResource CustomButtonStyle}"
+                Width="100" />
+            <Button
+                Click="GameButton_Click"
+                Content=""
+                Grid.Column="1"
+                Grid.Row="1"
+                Height="100"
+                Style="{StaticResource CustomButtonStyle}"
+                Width="100" />
+            <Button
+                Click="GameButton_Click"
+                Content=""
+                Grid.Column="2"
+                Grid.Row="1"
+                Height="100"
+                Style="{StaticResource CustomButtonStyle}"
+                Width="100" />
+            <Button
+                Click="GameButton_Click"
+                Content=""
+                Grid.Column="0"
+                Grid.Row="2"
+                Height="100"
+                Style="{StaticResource CustomButtonStyle}"
+                Width="100" />
+            <Button
+                Click="GameButton_Click"
+                Content=""
+                Grid.Column="1"
+                Grid.Row="2"
+                Height="100"
+                Style="{StaticResource CustomButtonStyle}"
+                Width="100" />
+            <Button
+                Click="GameButton_Click"
+                Content=""
+                Grid.Column="2"
+                Grid.Row="2"
+                Height="100"
+                Style="{StaticResource CustomButtonStyle}"
+                Width="100" />
+        </Grid>
+    </Grid>
+</Window>
