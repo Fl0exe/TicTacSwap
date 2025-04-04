@@ -4,7 +4,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace SicTacSwap {
+namespace TicTacSwap {
     /// <summary>
     ///     Interaction logic for MainWindow.xaml
     /// </summary>

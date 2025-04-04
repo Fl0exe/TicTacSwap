@@ -1,4 +1,4 @@
-﻿namespace SicTacSwap {
+﻿namespace TicTacSwap {
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SicTacSwap", "SicTacSwap\SicTacSwap.csproj", "{BBCF1A47-7304-4C1D-9B8E-5B5029F73F71}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacSwap", "TicTacSwap\TicTacSwap.csproj", "{BBCF1A47-7304-4C1D-9B8E-5B5029F73F71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
